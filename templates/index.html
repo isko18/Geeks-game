@@ -20,7 +20,7 @@
                 <img src="{% static 'assets/img/3fb5d6dda8c3d4ff156db5278544dcec-fotor-bg-remover-20240502211819 1.png' %}" alt="">
             </div>
             <div class="items">
-               {% for boy in boy|dictsort:"time" %}
+               {% for boy in boy|dictsortreversed:"time" %}
                 <div class="item">
                     <div class="index">
                         {{boy.id}}
@@ -45,7 +45,7 @@
                 <img src="{% static 'assets/img/3fb5d6dda8c3d4ff156db5278544dcec-fotor-bg-remover-20240502211819 1.png' %}" alt="">
             </div>
             <div class="items">
-                {% for girl in girl %}
+                {% for girl in girl|dictsortreversed:"time" %}
                 <div class="item">
                     <div class="index">
                         {{girl.id}}
@@ -53,7 +53,7 @@
                     <div class="info">
                         <div class="name">{{girl.full_name}}</div>
                         <div class="line"></div>
-                        <div class="time">{{girl.time|safe}}</div>
+                        <div class="time">{{girl.time|date:"Y-m-d H:i:s.u"}}</div>
                     </div>
                 </div>  
                 {% endfor %}
