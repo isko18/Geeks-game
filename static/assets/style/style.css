@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "slnt" 0;
+}
+
+.boys {
+    height: 100vh;
+    overflow: auto;
+    width: 100%;
+    background-color: #1E64EB;
+}
+
+.girls {
+    height: 100vh;
+    overflow: auto;
+    width: 100%;
+    background-color: #FA07FFC9;
+}
+
+.container {
+    display: flex;
+
+}
+
+.boys_head,
+.girls_head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title {
+    width: 100%;
+    height: 64px;
+    border: 1px solid white;
+    border-radius: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20.12px;
+    font-weight: 400;
+    line-height: 24.35px;
+    text-align: left;
+
+
+
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.index {
+    border: 1px solid white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.info {
+    width: 100%;
+    border: 1px solid white;
+    border-radius: 63px;
+    height: 63px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.name,
+.time {
+    width: 100%;
+    font-size: 24.48px;
+    font-weight: 400;
+    line-height: 29.63px;
+    text-decoration: underline;
+    padding: 30px;
+    color: white;
+}
+
+.line {
+    width: 1px;
+    background-color: white;
+    height: 100%;
+}

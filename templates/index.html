@@ -1,0 +1,70 @@
+{% load static %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'assets/style/style.css' %}">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="boys">
+            <div class="boys_head">
+                <img src="{% static 'assets/img/143d50d5-e34b-49c7-b248-b8679da4ba37 1.png' %}" alt="">
+                <div class="title">Boys</div>
+                <img src="{% static 'assets/img/3fb5d6dda8c3d4ff156db5278544dcec-fotor-bg-remover-20240502211819 1.png' %}" alt="">
+            </div>
+            <div class="items">
+               {% for boy in boy|dictsort:"time" %}
+                <div class="item">
+                    <div class="index">
+                        {{boy.id}}
+                    </div>
+                    <div class="info">
+                        <div class="name">{{boy.full_name}}</div>
+                        <div class="line"></div>
+                        <div class="time">{{boy.time|date:"Y-m-d H:i:s.u"}}</div>
+                    </div>
+                </div>
+                {% endfor %}
+  
+
+
+            </div>
+        </div>
+        
+        <div class="girls">
+            <div class="girls_head">
+                <img src="{% static 'assets/img/143d50d5-e34b-49c7-b248-b8679da4ba37 1.png' %}" alt="">
+                <div class="title">girls</div>
+                <img src="{% static 'assets/img/3fb5d6dda8c3d4ff156db5278544dcec-fotor-bg-remover-20240502211819 1.png' %}" alt="">
+            </div>
+            <div class="items">
+                {% for girl in girl %}
+                <div class="item">
+                    <div class="index">
+                        {{girl.id}}
+                    </div>
+                    <div class="info">
+                        <div class="name">{{girl.full_name}}</div>
+                        <div class="line"></div>
+                        <div class="time">{{girl.time|safe}}</div>
+                    </div>
+                </div>  
+                {% endfor %}
+                
+
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+{% endblock %}
